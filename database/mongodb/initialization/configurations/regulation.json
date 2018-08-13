@@ -1,0 +1,29 @@
+{
+    "_id": "Regulation",
+    "_description": "Rules and limits for application use",
+
+    "internal": {
+        "authentication": {
+            "_description": "Lifetime of a user token",
+            "userTokenLifetime": "5184000000"
+        },
+        "dataMovement": {
+            "_description": "Maximum degrees allowed for querying geographic data",
+            "wgs84QueryMaximumDegrees": 25
+        }
+    },
+
+    "userAccount": {
+        "_description": "Interval to change a user name",
+        "changeUserNameInterval": "5184000000"
+    },
+
+    "messaging": {
+        "_description": "Interval for sending the set maxiumum number of messages",
+        "maximumMessagesBreakInterval": "12000",
+        "_description": "Maximum number of messages allowed to be sent during the maximum number messages interval",
+        "maximumMessagesWithinBreakInterval": "3"
+    }
+
+}
+

@@ -1,0 +1,15 @@
+{
+    "_id": "Validation",
+    "_description": "Rules for validating resources",
+  
+    "user": {
+        "nameRegex": "[a-z0-9_]*",
+        "nameMinimumLength": 5,
+        "nameMaximumLength": 20,
+        "passwordRegex": "[a-zA-Z0-9_!@#$%^&*]*",
+        "passwordMinimumLength": 4,
+        "passwordMaximumLength": 15
+    },
+
+}
+

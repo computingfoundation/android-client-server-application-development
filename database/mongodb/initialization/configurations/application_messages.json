@@ -1,0 +1,25 @@
+{
+    "_id": "ApplicationMessages",
+    "_description": "Application messages",
+    
+    "application": {
+        "_description": "Displayed on application start or after the first get initial data request",
+        "onStart": "",
+        "_description": "The number of times the application should start before showing the message",
+        "onStartShowInterval": 3
+    },
+    
+    "userAccount": {
+        "_description": "Displayed after a user logs in",
+        "onLogIn": "",
+        "_description": "The number of times a user must log in before showing the message",
+        "onLogInShowInterval": 3
+    },
+    
+    "createAccount": {
+        "_description": "Displayed after creating an account",
+        "postAccountCreated": "Welcome to Organization %s!"
+    },
+
+}
+

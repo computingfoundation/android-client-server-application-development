@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Copyright 2015 Pants project contributors (see CONTRIBUTORS.md).
+# Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+# =============================== NOTE ===============================
+# This pants bootstrap script comes from the pantsbuild/setup
+# project and is intended to be checked into your code repository so
+# that any developer can check out your code and be building it with
+# pants with no prior setup needed.
+#
+# You can learn more here: https://pantsbuild.github.io/setup
+# ====================================================================
+
+bash ${PANTS_GLOBAL}/pants "${@}"

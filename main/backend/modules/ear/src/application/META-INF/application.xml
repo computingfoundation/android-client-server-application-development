@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+
+    <description>Backend EAR containing EJB and WAR</description>
+    <display-name>organization-backend-ear</display-name>
+
+    <module>
+        <ejb>backend-ear-ejb.jar</ejb>
+    </module>
+
+    <module>
+        <web>
+            <web-uri>backend-ear-war.war</web-uri>
+            <!-- Context root for the entire backend application; use web.xml for
+              Wicket and the RESTful service context roots -->
+            <context-root>/</context-root>
+        </web>
+    </module>
+
+    <library-directory>lib</library-directory>
+
+</application>
+
+
+<!-- <application xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" version="7">
+    <description>Organization backend application</description>
+    <display-name>Organization Backend</display-name>
+    <module>
+        <ejb>backend-ejb.jar</ejb>
+    </module>
+    <module>
+        <web>
+            <web-uri>backend-war.war</web-uri>
+            <context-root>/backend-war</context-root>
+        </web>
+    </module>
+</application> -->

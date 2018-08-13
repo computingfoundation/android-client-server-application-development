@@ -1,0 +1,18 @@
+{
+  "_id": "Base",
+  "_description": "General base constant values",
+  
+  "generalConstants": {
+    "resources": {
+      "latitudeLongitudeRegex": "(-??[\\d]{1,2}[.][\\d]{6})(?:\\s{1,2})(-??[1]?[\\d]{1,2}[.][\\d]{6})"
+    }
+  },
+
+  "servers": {
+    "mqtt": {
+      "userName": "organizationUser"
+    }
+  }
+
+}
+
