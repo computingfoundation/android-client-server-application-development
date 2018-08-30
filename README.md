@@ -1,95 +1,109 @@
 <div align='center'>
-	<img src='https://raw.githubusercontent.com/computingfoundation/enterprise-client-server-android-applications/images/logo.png' width='36%' alt='logo.png'>
+	<img src='https://raw.githubusercontent.com/computingfoundation/enterprise-android-application-development/images/logo.png' width='36%' alt='logo.png'>
 </div>
 <br><br><br>
 
-**Enterprise-client-server-android-applications** is a complete generic enterprise-ready foundation for client-server Android applications.
-
-It consists of three components:
+**Enterprise-android-application-development** is a resource of three components forming a foundational enterprise Android application:
 
 1. A backend application
 2. A native Android application
-3. A commons library
+3. A commons library (shared between the backend and Android application)
 
-This project is a complete generic working Android client-server application. Its purpose is to provide a complete foundation for almost any new enterprise Android client-server application and reduce its development time to a fraction. The following is a list/overview of each application component it implements:
+This application is a completely implemented enterprise Android application. Each application component is implemented in the way you would want an enterprise Android application to implement, with complete coverege of all respective and relative enterprise application requirements in its respective component(s).
+
+All you have to do is start this project to have the following complete generic enterprise frameworks, among other infrastructure frameworks, completely in place:
+
+* Backend modularized HTTP web service
+* Backend and frontend *common* HTTP response parceling and JSON REST API
+* Frontend modularized UI and event processing
+
+The following is a complete list of all the application components this application implements in each paradigm:
 
 ## Features
 
-* Fully implemented user account features
+* User accounts
     * Log in
     * Create account
     * Reset/forgot password
     * Account settings (change or remove email and phone and change username and password)
     * Account deletion
     * Phone number and email address verification (built on the Nexmo messaging service [can be easily changed])
-* Schemaless remote client configurations
-    * Provides base model validation configurations as a starting point
-    * Provides base application regulation configurations as a starting point (currently the only configuration is user token lifetime)
-    * Fully implemented in frontend and backend code
-* Application event messages (via remote client configurations)
-    * "First show" and reshow intervals
-    * Enabling/disabling of the "Do not show again" option
-    * Fully implemented in frontend code at multiple events, including app start up and exit, account created and log in
-    * Easily extensible
+* Remote client configurations
+    * Pre-implemented base model validation and application regulation configurations as a starting point (the only application regulation currently implemented is user token lifetime)
+    * Completely implemented in backend and frontend with all application features
+    * Extensible
+* Remotely configured application event messages
+    * Pre-created messages for application start and quit, account creation and log in events
+    * "First show" and reshow intervals with complete frontend implementation
+    * Enabling/disabling of the "Do not show again" option with complete frontend implementation
+    * Extensible
 
 ## Authentication
 
-* Stateless session authentication
-    * Complete secure implementation of token creation and validation in frontend and backend with processing (e.g. denying session-based request)
-    * Provides a generic token algorithm (based on the HMAC hashing algorithm) as a starting point
-    * Completely integrated with backend HTTP request, response and request error handling and processing framework
-* Stateful user authentication
+* A stateless session authentication framework
+    * Secure token creation and validation framework
+    * Completely implemented in backend and frontend *common* HTTP response parceling framework
+    * Completely implemented backend and frontend logic (e.g. denying session-based request)
+    * Pre-implemented generic token algorithm (based on the HMAC hashing algorithm) as a starting point
+* A stateful user authentication framework
     * Key generation and storage
-    * Complete secure implementation of token creation and validation in frontend and backend with processing (e.g. denying user-based requests and logging user out)
-    * Provides a generic token algorithm (based on the HMAC hashing algorithm) as a starting point
-    * Completely integrated with backend HTTP request, response and request error handling and processing framework
+    * Secure token creation and validation framework
+    * Completely implemented in backend and frontend *common* HTTP response parceling framework
+    * Completely implemented backend and frontend logic (e.g. denying user-based requests and logging user out)
+    * Pre-implemented generic token algorithm (based on the HMAC hashing algorithm) as a starting point
 
 ## Infrastructure
 
-* Complete frontend and [backend](https://github.com/computingfoundation/enterprise-client-server-android-applications/tree/master/main/backend/modules/ejb/src/java/com/myorganization/backend/rest) HTTP request, response and request error frameworks
-    * Fully-implemented REST framework based on JAX-RS
-    * Full error management on both the frontend and backend with three error types: Client fatal error, server fatal error and client general error
-    * A complete generic solution to process a response body
-* A complete generic REST model processing framework
-    * Provides base models as a starting point
-    * JSON serialization and deserialization
-    * A generic backend framework for processing HTTP responses
-    * Frontend JSON processing to a DAO database
-* Fully implemented model object validation
-    * Complete validation of [user](https://github.com/computingfoundation/enterprise-client-server-android-applications/blob/master/main/core/modules/commons/src/java/com/organization/commons/validation/UserValidator.java) and base models
-    * Fully implemented on the frontend and backend
-* Fully implemented frontend event processing
-    * Fully implemented event processing for all account settings feature HTTP requests and request errors
-    * Fully implemented event processing for all generic model data get HTTP requests and request errors and processing
-* Multi-database integration
-    * Full extensible implementation of PostgreSQL for application primary data and relation SQL database data
-    * Full extensible implementation of MongoDB for remote client configurations and document-oriented NoSQL database data
-    * Full extensible implementation of [Apache Cassandra](https://github.com/computingfoundation/enterprise-client-server-android-applications/blob/master/main/backend/modules/ejb/src/java/com/myorganization/backend/database/Cassandra.java) for base vote/counter data and distributed wide column store NoSQL database data
-* Complete generic utilities for every application category
+### Backend
+
+* A completely implemented backend modularized JAX-RS HTTP web service framework
+  * Session and user token validation
+  * Completely implemented parameter and resource validation
+* Completely implemented multi-database framework
+    * Completely implemented PostgreSQL database for application primary data and relation SQL database data
+    * Completely implemented MongoDB database for remote client configurations and document-oriented NoSQL database data
+    * Completely implemented Apache Cassandra database for base counter data and distributed wide column store NoSQL database data
+
+### Frontend
+
+* Completely implemented frontend modularized event processing framework
+    * Complete event processing of user account settings feature HTTP requests and request errors
+    * Complete event processing of base model data GET HTTP requests and request errors and processing
+* Completely implemented frontend modularized error management framework
+
+### Backend and frontend
+
+Note that **common** refers to a type of component based on shared code between the backend and frontend.
+
+* A **common** HTTP response parceling framework
+  * Included completely implemented **common** modularized error management framework based on three error types: Client fatal error, server fatal error and client general error
+* A **common** generic JSON REST API framework
+    * Pre-implemented base models as a starting point
+    * **Common** REST JSON serialization and deserialization
+    * Completely implemented backend and frontend JSON data storage logic
+* Completely implemented **common** model object validation of [user](https://github.com/computingfoundation/enterprise-android-applications/blob/master/main/core/modules/commons/src/java/com/organization/commons/validation/UserValidator.java) and base models
+    * Completely implemented backend HTTP web service business logic
+    * Completely implemented frontend business logic
+* Completely implemented **common** modularized utilities for every application category
 
 ## Security
 
 * Two-way SSL/TLS encryption
-    * Fully implemented certificate pinning and processing in frontend
-    * Provided set-by-step tutorial of generating SSL certificates for use between client application and the WildFly application server
-    * Step-by-step tutorial of integration with WildFly
+    * Completely implemented certificate pinning and processing in the frontend
+    * Provided set-by-step tutorial of generating and implementing SSL certificates for two-way SSL/TLS authentication with the WildFly application server
 
 ## UI
 
-* Reusable UI widgets
-    * Generic API-based dialogs (e.g. info, text input and options)
-* A fully implemented UI framework
-    * A generic activity hierarchy with generic base activity features such as enabling a view pager or activity drawer and committing fragment transactions
-    * Account settings list
-    * Full UI implementation of each account setting feature
+* A complete modularized UI framework
+    * Completely implemented modularized UI components (e.g. extensible log in screen and content list and view pager)
+    * Completely implemented UI logic of every application feature
+    * A modularized activity hierarchy with generic base activity features (e.g. enabling a view pager or activity drawer and committing fragment transactions)
+* Modularized UI components
+    * Modularized API-based widgets (e.g. extensible TextView with custom font loading)
+    * Modularized API-based dialogs (e.g. extensible info, text input and options)
+    * Modularized view layouts (e.g. extensible activity layout with drawer)
 
-This project is easy to set up as each application component is fully implemented. See [Set up](https://github.com/computingfoundation/enterprise-client-server-android-applications#set-up) for more information.
-
-Each application component of this project is implemented with possibly the best implementation possible. **This project has been in development for three full years.**
-
-This project is also the foundation of Android application [FencedIn](http://www.fencedinapp.com), an application that has been in development for four full years.
-
-**Please note: This project is still unreleased.** See [Release](https://github.com/computingfoundation/enterprise-client-server-android-applications#release) for more information.
+Please note: This project is still unreleased. See [Release](https://github.com/computingfoundation/enterprise-android-application-development#release) for more information.
 
 # Project setup
 
@@ -97,7 +111,7 @@ The following is an overview of the setup of this project.
 
 ## IDE
 
-This project is set up as an IntelliJ project and each of the three components are modules. [Here](https://raw.githubusercontent.com/computingfoundation/enterprise-client-server-android-applications/images/intellij-modules-illustration.png) is an illustration of the setup. *Please note that core/dao will be removed and core/commons will be changed to a top-level module.*
+This project is set up as an IntelliJ project and each of the three components are modules. [Here](https://raw.githubusercontent.com/computingfoundation/enterprise-android-applications/images/intellij-modules-illustration.png) is an illustration of the setup. *Please note that core/dao will be removed and core/commons will be changed to a top-level module.*
 
 ## Scripts
 
@@ -130,9 +144,9 @@ As this project is unreleased, the following is only an overview of the set up p
 
 # Release
 
-This project is unreleased and needs to be finalized. In order for me to finalize it, I need funding. To read more and donate, please go to [www.fundly.com/cf-enterprise-client-server-android-applications](https://fundly.com/cf-enterprise-client-server-android-applications).
+This project is still unreleased as it still needs to be finalized.
 
-Some source code files from the backend and commons library components and the databases are provided. Please note that many of them have changed.
+Some source code files from the backend and commons library components and the databases are provided.
 
 Thank you.
 
