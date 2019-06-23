@@ -60,5 +60,9 @@ This project is still unreleased.
 
 Some files from the backend application and commons library have been provided as samples.
 
-Thank you.
+**Update (06/22/19):**
+
+I see that this repository has gained some stargazers. Sorry for taking so long to release this project. I have been working on a lot of things, will be busy for the next 2 months and plan on releasing it in August.
+
+Thank you for your patience.
 
