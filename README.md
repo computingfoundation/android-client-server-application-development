@@ -3,53 +3,57 @@
 </div>
 <br><br><br>
 
-**Enterprise-android-application-development** is a resource of three components forming a foundation for enterprise Android application development. These three components are the following:
+**Enterprise-android-application-development** is a foundation for enterprise Android application development. It is made up of three components:
 
 1. A backend application
 2. A native Android application
 3. A commons library
 
-They implement all the basic components of an enterprise Android application. These application components are listed below.
+This application implements multiple application components.
 
 # Application components
 
 ## Features
 
 * User accounts
-    * Log in
-    * Create account
+    * Account creation
     * Account settings
-* Client-server external configurations
-    * Model validation
-    * Business regulation
-    * Frontend user messages
+    * Token lifecycle management
+* External client configurations
+    * Multiple configuration types (e.g. model validation, regulation and user messages)
+    * Updated dynamically
 
 ## Authentication
 
-* Session and user authentication with complete token lifecycle management
+* Session and user authentication
+* Token management (frontend and backend)
 
 ## Infrastructure
 
 ### Backend
 
-* JAX-RS HTTP web framework
-* Multi-database implementation
+* JAX-RS RESTful web framework
+* Multi-database implementation:
     * PostgreSQL, Apache Cassandra and MongoDB
 
 ### Backend and frontend
 
-* Error processing
-* A shared JSON serialization/deserialization framework
-* Shared utilities
+*common\**: A library shared between the Android and backend applications
+
+* Common model framework
+* Data/JSON processing framework
+* Common HTTP request processing framework
+* Error management infrastructure
+* Common language and model utilities
 
 ## Security
 
 * Two-way SSL/TLS encryption
-    * Provided set-by-step tutorial for certificate generation and pinning and set up with the WildFly application server
+    * Included step-by-step two-way SSL/TLS set up instructions with WildFly
 
 ## UI
 
-* A UI framework
+* Complete UI framework
 * Generic UI components
     * Widgets and dialogs
     * Generic application components
@@ -62,7 +66,7 @@ Some files from the backend application and commons library have been provided a
 
 **Update (06/22/19):**
 
-I see that this repository has gained some stargazers. Sorry for taking so long to release this project. I have been working on a lot of things, will be busy for the next 2 months and plan on releasing it in August.
+Sorry for taking so long to release this project. I have been pretty busy the past few months and still have quite a bit of work to do in the next 3 months so I plan on releasing it in September.
 
 Thank you for your patience.
 
