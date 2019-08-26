@@ -3,70 +3,66 @@
 </div>
 <br><br><br>
 
-**Enterprise-android-application-development** is a foundation for enterprise Android application development. It is made up of three components:
+**Enterprise-android-application-development** is an enterprise Android application development framework. It consists of all the application components required to make an enterprise Android application and is made up of three components:
 
 1. A backend application
 2. A native Android application
 3. A commons library
 
-This application implements multiple application components.
-
 # Application components
+
+It consists of the following components:
 
 ## Features
 
 * User accounts
     * Account creation
     * Account settings
-    * Token lifecycle management
-* External client configurations
-    * Multiple configuration types (e.g. model validation, regulation and user messages)
-    * Updated dynamically
+* Remote client configurations
+    * Multiple configuration types (e.g. resource validation, specifications and regulations)
+    * Controls multiple app areas.
+* Remote user messages (e.g. open/close activity, create account and log in)
 
 ## Authentication
 
 * Session and user authentication
-* Token management (frontend and backend)
+* Full lifecycle token management (frontend and backend)
 
 ## Infrastructure
 
 ### Backend
 
-* JAX-RS RESTful web framework
+* RESTful web framework
 * Multi-database implementation:
     * PostgreSQL, Apache Cassandra and MongoDB
 
 ### Backend and frontend
 
-*common\**: A library shared between the Android and backend applications
+*common\**: A library shared between the frontend and backend applications
 
-* Common model framework
-* Data/JSON processing framework
-* Common HTTP request processing framework
-* Error management infrastructure
+* Common model objects
+* JSON framework
+* Common HTTP request/response framework
+* Error management framework
 * Common language and model utilities
 
 ## Security
 
 * Two-way SSL/TLS encryption
-    * Included step-by-step two-way SSL/TLS set up instructions with WildFly
+    * Included step-by-step two-way SSL/TLS set up instructions for WildFly
 
 ## UI
 
-* Complete UI framework
+* UI framework
 * Generic UI components
     * Widgets and dialogs
     * Generic application components
 
 # Release
 
-This project is still unreleased.
+This project has been taking me a while but it will be done soon.
 
 Some files from the backend application and commons library have been provided as samples.
 
-**Update (06/22/19):**
-
-Sorry for taking so long to release this project. I have been pretty busy the past few months and still have quite a bit of work to do in the next 3 months so I plan on releasing it in September.
-
-Thank you for your patience.
+Thank you.
 
