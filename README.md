@@ -17,6 +17,7 @@ It consists of the following components:
 
 * User accounts
     * Account creation
+    * Phone number/email verification
     * Account settings
 * Remote client configurations
     * Multiple configuration types (e.g. resource validation, specifications and regulations)
