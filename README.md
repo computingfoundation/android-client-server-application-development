@@ -1,5 +1,5 @@
 <div align='center'>
-	<img src='https://raw.githubusercontent.com/computingfoundation/enterprise-android-application-development/images/logo.png' width='36%' alt='logo.png'>
+	<img src='https://raw.githubusercontent.com/computefoundation/enterprise-android-application-development/images/logo.png' width='36%' alt='logo.png'>
 </div>
 <br><br><br>
 
@@ -61,9 +61,7 @@ It consists of the following components:
 
 # Release
 
-This project has been taking me a while but it will be done soon.
-
-Some files from the backend application and commons library have been provided as samples.
+Update: May 2021: This project has been taking me a while but it will finished in fall.
 
 Thank you.
 
