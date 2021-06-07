@@ -3,65 +3,46 @@
 </div>
 <br><br><br>
 
-**Enterprise-android-application-development** is an enterprise Android application development framework. It consists of all the application components required to make an enterprise Android application and is made up of three components:
+# Enterprise-android-application-development
 
-1. A backend application
-2. A native Android application
-3. A commons library
+**Enterprise-android-application-development** is a full-stack Java Android and backend framework for developing full-stack enterprise Android applications quickly. It has multiple features that will cut a year (but probably two) off of your full stack application development.
 
-# Application components
+It consists of three components:
 
-It consists of the following components:
+* Backend application (Java)
+* Android application (Java)
+* Core library (Java)
 
-## Features
+# Features
 
 * User accounts
     * Account creation
     * Phone number/email verification
     * Account settings
+        * Change username
+        * Change password
+        * Change phone number
+        * Change email address
+* Generic Android UI framework
+    * Generic UI components for all sections of the app:
+        * User account creation and management
+        * Widgets and dialogs
+        * Navigation buttons
+    * Generic activity/screen heirarcy
+    * Generic components to display the generic object data
+* Full REST framework
+    * A full REST framework
+    * Complete backend error management
+    * Complete database data management framework (built on PostgreSQL)
+* Full-stack object managment framework
+    * A client and backend framework for serializing, deserializng and diplaying data
+    * Simple enough to application-specific object data easily
 * Remote client configurations
-    * Multiple configuration types (e.g. resource validation, specifications and regulations)
-    * Controls multiple app areas.
-* Remote user messages (e.g. open/close activity, create account and log in)
+    * Control multiple things in the app by changing configuration records in the database, like characters for username validation, object update restrictions, minimum token life and much more (most is beyond the scope of this bullet point).
+* Remote user messages
+    * Change user messages that are displayed on the opening of a screen or the click of a button or almost any event by changing configuration records in the database (full framework within the app to implement remote message for any event).
 
-## Authentication
-
-* Session and user authentication
-* Full lifecycle token management (frontend and backend)
-
-## Infrastructure
-
-### Backend
-
-* RESTful web framework
-* Multi-database implementation:
-    * PostgreSQL, Apache Cassandra and MongoDB
-
-### Backend and frontend
-
-*common\**: A library shared between the frontend and backend applications
-
-* Common model objects
-* JSON framework
-* Common HTTP request/response framework
-* Error management framework
-* Common language and model utilities
-
-## Security
-
-* Two-way SSL/TLS encryption
-    * Included step-by-step two-way SSL/TLS set up instructions for WildFly
-
-## UI
-
-* UI framework
-* Generic UI components
-    * Widgets and dialogs
-    * Generic application components
 
 # Release
 
-Update: May 2021: This project has been taking me a while but it will finished in fall.
-
-Thank you.
-
+Update: May 2021: This project is not fully finished but all I have to do is clean up the source code. This repository currently contains only some of the source code. The full source code will be uploaded in the fall.
